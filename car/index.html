@@ -12,7 +12,7 @@
 <body>
     <!-- Propiedades o atributos -->
     <!-- <img src="./assets/logo.svg" alt="Logo de Ferrari"/>  -->
-    <header>
+    <header id="navbar">
         <div>
             <img src="./assets/ferrari_nav.png" alt="">
             <nav>
@@ -35,16 +35,41 @@
                 </ul>
             </nav>
         </div>
-        <a href="./Views/Search.html">
+        <a href="./Views/Search.html" class="seacr">
             Search
         </a>
     </header>
-
-
-
-
-    <main></main>
+    <main>
+        <section class="Section_number_one">
+            <div>
+                <span class="Title">Ferrari f80: El nuevo supercar</span>
+                <div class="ver_mas">
+                    <span>Para saber más</span>
+                    <svg viewBox="0 0 10 16" fill="#FFF" class="icon" width="10" height="16"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M7.268 9.547L0 16l4-8-4-8 7.268 6.453C7.715 6.82 8 7.377 8 8c0 .623-.285 1.18-.732 1.547z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </section>
+        <section class="Section_number_Tow"></section>
+    </main>
     <footer></footer>
+    <script>
+        const navbar = document.getElementById("navbar");
+        console.log(screen.width);
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 100) {
+            navbar.style.top = 0;   
+            navbar.style.backgroundColor = "#0000005c"; // Cambiar a negro al hacer scroll
+        } else {
+              navbar.style.top = '1rem';   
+            navbar.style.backgroundColor = "transparent"; // Mantener transparente cuando esté en la parte superior
+          }
+        });
+      </script>
 </body>
 
 </html>
